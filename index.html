@@ -74,6 +74,16 @@
   .provide li{ padding:10px 0; border-top:1px solid var(--line); font-size:15px; }
   .provide li:first-child{ border-top:0; }
   .close p{ font-size:17px; color:var(--ink); }
+  .funnel{ width:100%; border-collapse:collapse; margin:18px 0 4px; }
+  .funnel td{ padding:12px 2px; border-top:1px solid var(--line); font-size:15px; vertical-align:baseline; }
+  .funnel tr:first-child td{ border-top:0; }
+  .funnel .lbl{ color:var(--ink); }
+  .funnel .r{ display:block; color:var(--muted); font-size:13px; margin-top:2px; }
+  .funnel .n{ text-align:right; font-family:var(--heading); color:var(--navy); font-size:19px; white-space:nowrap; padding-left:14px; }
+  .roi{ background:var(--accent-soft); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:18px 0 0; }
+  .roi p{ margin:0 0 8px; font-size:15px; }
+  .roi p:last-child{ margin-bottom:0; }
+  .roi .big{ font-family:var(--heading); color:var(--navy); }
   footer{ padding:30px 0 10px; color:var(--muted); font-size:13px; }
   a{ color:var(--accent); }
   @media (max-width:640px){
@@ -193,8 +203,27 @@
   <ul class="provide">
     <li>Whatever client results you can point us at.</li>
     <li>Sign-off on the templates, the knowledge doc and the messaging rules before anything sends.</li>
-    <li><b>On cost:</b> a flat build fee plus performance. We'll put exact numbers in a short scoped proposal once we agree the shape, no surprises.</li>
   </ul>
+</section>
+
+<section>
+  <p class="eyebrow">The proposal</p>
+  <h2>What you'd pay, and what comes back</h2>
+  <p>We contact <b>15,000 nonprofit decision-makers</b>, one email each, across about <b>two months</b>.</p>
+  <p><b>What you'd pay: €1,975 up front, then €2.80 for each document produced.</b> On our call I said I'd keep your upfront investment as low as I could, and this is me holding to that. The €1,975 covers the full setup and the sending infrastructure. After that, the personalised documents are the most involved and resource-intensive part of the whole operation, each one is researched, written and independently audited before it reaches a CEO, so instead of guessing a number and loading it into the upfront fee, we meter it: €2.80 per document, charged only when a CEO actually asks for one. As the campaign works, those documents become the largest part of what you pay, which is the whole idea. You pay for engaged CEOs, not for a result that might not come, and your money stays in your pocket until the interest is real.</p>
+  <p>Here is the worst case I can honestly build, every number pushed to the floor:</p>
+  <table class="funnel">
+    <tr><td class="lbl">Decision-makers contacted<span class="r">over two months</span></td><td class="n">15,000</td></tr>
+    <tr><td class="lbl">Request the document<span class="r">3% interested reply</span></td><td class="n">450</td></tr>
+    <tr><td class="lbl">Book a meeting<span class="r">1 in 15 of those</span></td><td class="n">30</td></tr>
+    <tr><td class="lbl">Become clients<span class="r">30% close, half your usual 60%</span></td><td class="n">9</td></tr>
+  </table>
+  <div class="roi">
+    <p><b>Your investment:</b> €1,975 + (450 &times; €2.80) = <span class="big">€3,235</span></p>
+    <p><b>Your return:</b> at your €1,700 Kickstart price alone, ignoring every upsell, 9 clients = <span class="big">€15,300</span></p>
+    <p><b>That is 4.7&times; back, in the worst case I can construct.</b></p>
+  </div>
+  <p>And that is the floor. Our typical numbers for a campaign like this run <b>7&ndash;13% interested replies</b> and about <b>1 in 7</b> booking, which would put this somewhere around <b>150&ndash;280 meetings</b>. At your 60% close rate that is more new clients than most organisations could onboard from a single campaign, which is the good kind of problem, and exactly why this is built as a test you can scale from.</p>
 </section>
 
 <section class="close">
