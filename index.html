@@ -28,7 +28,7 @@
     background:var(--cream); border:1px solid var(--card-stroke); border-radius:14px; box-shadow:0 1px 3px rgba(0,22,57,.045); }
 
   h1,h2,h3{ font-family:var(--heading); color:var(--ink); font-weight:400; letter-spacing:-0.005em; }
-  .logo{ height:48px; width:auto; margin:0 0 28px; display:block; }
+  .logo{ height:144px; width:auto; max-width:100%; margin:0 0 22px; display:block; }
   header{ padding:8px 0 30px; border-bottom:1px solid var(--line); }
   h1{ font-size:33px; line-height:1.24; margin:0 0 14px; }
   .lede{ font-size:17px; color:var(--body); margin:0 0 14px; }
@@ -80,13 +80,13 @@
   .funnel .lbl{ color:var(--ink); }
   .funnel .r{ display:block; color:var(--muted); font-size:13px; margin-top:2px; }
   .funnel .n{ text-align:right; font-family:var(--heading); color:var(--navy); font-size:19px; white-space:nowrap; padding-left:14px; }
-  .roi{ background:var(--accent-soft); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:18px 0 0; }
+  .roi{ background:#e8f4ec; border:1px solid #bfd9c7; border-radius:12px; padding:18px 22px; margin:18px 0 0; }
   .roi p{ margin:0 0 8px; font-size:15px; }
   .roi p:last-child{ margin-bottom:0; }
   .roi .big{ font-family:var(--heading); color:var(--navy); }
-  .floor{ margin-top:34px; border:1px solid var(--line); border-radius:12px; padding:16px 20px; }
-  .floor .lbl2{ font-family:var(--heading); color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.07em; margin:0 0 9px; }
-  .floor p{ font-size:14px; line-height:1.55; color:var(--muted); margin:0 0 10px; }
+  .floor{ margin-top:34px; border:1px solid #edc0b4; background:#fcebe6; border-radius:12px; padding:18px 22px; }
+  .floor .lbl2{ font-family:var(--heading); color:#b23b23; font-size:12px; text-transform:uppercase; letter-spacing:.07em; margin:0 0 9px; }
+  .floor p{ font-size:15px; line-height:1.6; color:var(--body); margin:0 0 10px; }
   .floor p:last-child{ margin-bottom:0; }
   .floor b{ color:var(--body); }
   footer{ padding:30px 0 10px; color:var(--muted); font-size:13px; }
@@ -96,7 +96,7 @@
     body::before{ display:none; }
     .wrap{ max-width:none; margin:0 auto; padding:0; background:none; border:none; border-radius:0; box-shadow:none; }
     header{ padding:34px 0 26px; }
-    .logo{ height:44px; }
+    .logo{ height:104px; }
     h1{ font-size:28px; }
   }
 </style>
@@ -130,6 +130,7 @@
       <div class="stat"><b>20</b><span>drawing 40%+ from government</span></div>
     </div>
     <p>Wind came out at <b>89% government-funded</b>. Every one of those figures is read straight from IRS Form 990, line 1e, filed publicly. The same screen runs on any nonprofit category we point it at.</p>
+    <p>Government dependence is just the sharpest of several angles. Every nonprofit's filings carry something we can open on honestly, an over-reliance on one funder, a giving line that's slipped, a grant that lapsed, so each lead gets the truest thing we can say to it, never a generic blast. That's why the whole list stays reachable: the data just decides which real angle we lead with for each one.</p>
   </div>
 
   <div class="step">
@@ -219,14 +220,14 @@
   <p>Here is what a campaign like this typically returns:</p>
   <table class="funnel">
     <tr><td class="lbl">Decision-makers contacted<span class="r">over two months</span></td><td class="n">15,000</td></tr>
-    <tr><td class="lbl">Request the document<span class="r">~10% interested reply</span></td><td class="n">1,500</td></tr>
-    <tr><td class="lbl">Book a meeting<span class="r">1 in 7 of those</span></td><td class="n">~214</td></tr>
-    <tr><td class="lbl">Become clients<span class="r">your 60% close rate</span></td><td class="n">~128</td></tr>
+    <tr><td class="lbl">Request the document<span class="r">~10% interested reply (avg. for a campaign like this: 7&ndash;14%)</span></td><td class="n">1,500</td></tr>
+    <tr><td class="lbl">Book a meeting<span class="r">1 in 7 of those (avg. reply-to-call is 10&ndash;20% with our conversion assets)</span></td><td class="n">~214</td></tr>
+    <tr><td class="lbl">Become clients<span class="r">40% close (cold traffic, below your usual warm-traffic rate)</span></td><td class="n">~86</td></tr>
   </table>
   <div class="roi">
-    <p><b>New client revenue:</b> at your €1,700 Kickstart price alone, ignoring every upsell = <span class="big">~€217,000</span></p>
-    <p><b>Your all-in cost:</b> €1,975 + documents + my 5% = <span class="big">~€17,000</span></p>
-    <p><b>That is roughly 12&times; back.</b></p>
+    <p><b>New client revenue:</b> at your €1,700 Kickstart price alone, ignoring every upsell = <span class="big">~€146,000</span></p>
+    <p><b>Your all-in cost:</b> €1,975 + documents + my 5% = <span class="big">~€13,500</span></p>
+    <p><b>That is roughly 11&times; back.</b></p>
   </div>
   <div class="floor">
     <p class="lbl2">And the floor</p>
