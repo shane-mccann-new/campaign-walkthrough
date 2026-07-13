@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>How the campaign would work — for Darren</title>
+<style>
+  @font-face{ font-family:"Codec Pro"; src:url("fonts/CodecPro-Regular.ttf") format("truetype"); font-weight:400; font-style:normal; font-display:swap; }
+  @font-face{ font-family:"Codec Pro"; src:url("fonts/CodecPro-Italic.ttf") format("truetype"); font-weight:400; font-style:italic; font-display:swap; }
+  @font-face{ font-family:"PT Serif"; src:url("fonts/PT_Serif-Web-Italic.ttf") format("truetype"); font-weight:400; font-style:italic; font-display:swap; }
+
+  :root{
+    --cream:#FFFEF0; --navy:#001639; --orange:#E94B27; --beige:#F2F1DA;
+    --ink:#001639; --body:#2c384f; --muted:#6f7a8c; --line:#e6e3cd; --card:#ffffff;
+    --accent:#E94B27; --accent-soft:#fbeee9;
+    --mf:#fbe4d8; --mf-line:#eab39f; --maxw:730px;
+    --heading:"Codec Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{ margin:0; background:var(--cream); color:var(--body);
+    font:16px/1.62 var(--sans); -webkit-font-smoothing:antialiased; position:relative; }
+  body::before{ content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:url("assets/meridian-pattern.png") center center / cover no-repeat; opacity:.40; }
+  .wrap{ position:relative; z-index:1; max-width:var(--maxw); margin:0 auto; padding:0 22px; }
+
+  h1,h2,h3{ font-family:var(--heading); color:var(--ink); font-weight:400; letter-spacing:-0.005em; }
+  .logo{ height:30px; width:auto; margin:0 0 30px; display:block; }
+  header{ padding:56px 0 30px; border-bottom:1px solid var(--line); }
+  h1{ font-size:33px; line-height:1.24; margin:0 0 14px; }
+  .lede{ font-size:17px; color:var(--body); margin:0 0 14px; }
+  .lede:last-child{ margin-bottom:0; }
+  .eyebrow{ font-family:"PT Serif",Georgia,serif; font-style:italic; font-size:15px; color:var(--accent); margin:0 0 8px; }
+  h2{ font-size:22px; line-height:1.28; margin:0 0 12px; }
+  section{ padding:36px 0; border-bottom:1px solid var(--line); }
+  p{ margin:0 0 14px; }
+  p:last-child{ margin-bottom:0; }
+  .step{ padding:22px 0; }
+  .step + .step{ border-top:1px solid var(--line); }
+  .step h3{ font-size:18px; margin:0 0 8px; }
+  .stepnum{ color:var(--accent); font-weight:400; margin-right:9px; font-family:var(--heading); }
+  .note{ font-size:14px; color:var(--muted); }
+  b, strong{ color:var(--ink); font-weight:600; }
+
+  .artifact{ border:1px solid var(--line); border-radius:11px; background:var(--card); margin:16px 0;
+    box-shadow:0 1px 3px rgba(0,22,57,.05); }
+  .artifact-tag{ font-family:var(--heading); font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--accent);
+    background:var(--accent-soft); padding:8px 14px; border-bottom:1px solid var(--line); border-radius:11px 11px 0 0; }
+  .artifact-body{ padding:16px 17px; }
+  .email .subj{ font-size:13px; color:var(--muted); margin:0 0 12px; padding-bottom:10px; border-bottom:1px dashed var(--line); }
+  .email .subj b{ color:var(--ink); }
+  .email p, .docbody p{ margin:0 0 12px; color:var(--ink); font-size:15px; line-height:1.62; }
+  .email .sig, .docbody .sig{ color:var(--body); }
+  .doctitle{ font-family:var(--heading); color:var(--ink); font-size:17px; margin:0 0 14px; }
+  .docbody .fresh{ font-size:13px; color:var(--muted); font-style:italic; margin-top:14px; }
+  mark.mf{ background:var(--mf); border-bottom:1px solid var(--mf-line); color:var(--ink); padding:0 3px; border-radius:3px; font-style:normal; }
+  .brace{ color:var(--muted); }
+
+  .stat-row{ display:flex; flex-wrap:wrap; gap:10px; margin:16px 0; }
+  .stat{ flex:1 1 120px; border:1px solid var(--line); border-radius:10px; padding:13px 15px; background:var(--card); }
+  .stat b{ display:block; font-family:var(--heading); color:var(--navy); font-size:24px; letter-spacing:-0.01em; }
+  .stat span{ font-size:12.5px; color:var(--muted); }
+
+  .runcard{ border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:10px; background:var(--card); padding:16px 18px; margin:14px 0; }
+  .runcard h3{ font-size:16px; margin:0 0 7px; }
+  .runcard p{ font-size:15px; margin:0; color:var(--body); }
+
+  .ask{ background:var(--accent-soft); border:1px solid var(--line); border-radius:12px; padding:24px 24px; }
+  .ask h2{ margin-bottom:6px; }
+  .provide{ list-style:none; padding:0; margin:0; }
+  .provide li{ padding:10px 0; border-top:1px solid var(--line); font-size:15px; }
+  .provide li:first-child{ border-top:0; }
+  .close p{ font-size:17px; color:var(--ink); }
+  footer{ padding:30px 0 72px; color:var(--muted); font-size:13px; }
+  a{ color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img class="logo" src="assets/meridian-logo.png" alt="Meridian">
+  <h1>Darren, here's how the campaign would actually work</h1>
+  <p class="lede">Below I've outlined the end to end process, built on one real prospect so you can see exactly what a nonprofit CEO receives and why it works. Nothing below is mocked up: every number is from public filings, every email and doc is what would genuinely send, with your review and approval.</p>
+</header>
+
+<section>
+  <p>The goal is to reach nonprofit CEOs with a pattern disrupt: something specific enough that they actually stop and read it. That is the entire job of what follows.</p>
+  <p>We naturally prioritise the orgs most reliant on government grants, since that reliance is public record, down to the dollar.</p>
+  <p>The worked example throughout is a real organisation: <b>Wind Youth Services</b> in Sacramento, youth homelessness, about $2.8M a year, roughly 89% government-funded.</p>
+</section>
+
+<section>
+  <p class="eyebrow">How one lead converts</p>
+  <h2>The path from never having heard of you to a booked call</h2>
+
+  <div class="step">
+    <h3><span class="stepnum">1.</span>We find the nonprofits most likely to need you</h3>
+    <p>We read public IRS filings to find nonprofits living on government grants. Where a sector's federal funding is genuinely being delayed or pulled, as it is for youth homelessness right now, that pressure becomes the opening line. Where it isn't, we don't claim it: each sector's funding picture gets verified before it is ever used in an email. Either way, the reliance itself is public record, down to the dollar, so we target on it precisely instead of guessing.</p>
+    <p>For example: youth services. One pass narrowed the field like this:</p>
+    <div class="stat-row">
+      <div class="stat"><b>125</b><span>organisations pulled</span></div>
+      <div class="stat"><b>38</b><span>in the right size range</span></div>
+      <div class="stat"><b>20</b><span>drawing 40%+ from government</span></div>
+    </div>
+    <p>Wind came out at <b>89% government-funded</b>. Every one of those figures is read straight from IRS Form 990, line 1e, filed publicly. The same screen runs on any nonprofit category we point it at.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">2.</span>We reach them with one specific, true thing</h3>
+    <p>No blast, no fake "I loved your recent post" personalisation. One short email, built on that organisation's own numbers, naming the exact pressure they're under. Here is the one Wind's CEO would receive.</p>
+    <div class="artifact email">
+      <div class="artifact-tag">Sends as-is</div>
+      <div class="artifact-body">
+        <p class="subj"><b>Subject:</b> government funding</p>
+        <p>Miren, approx 9 in 10 dollars of your funding is government, and federal youth-homelessness grants are being delayed or pulled this year. We've helped <mark class="mf">[300+]</mark> nonprofit CEOs move off reliance on grants to individual donors, including <mark class="mf"><span class="brace">{{</span>Onwards' past client most like Wind<span class="brace">}}</span></mark>, a <mark class="mf"><span class="brace">{{</span>org type<span class="brace">}}</span></mark> from <mark class="mf"><span class="brace">{{</span>area<span class="brace">}}</span></mark>. I've made some notes on how we helped them, and how you can start making the same shift before Q4. Can I send them over?</p>
+        <p class="sig">Onwards,<br>Darren</p>
+      </div>
+    </div>
+    <p class="note">Every claim traces to a public source: the 89% to their 990, the grant delays to federal award records. Nothing is invented. The <mark class="mf">highlighted</mark> parts are the only places real proof from your clients gets dropped in, which is what the section further down is about.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">3.</span>When they reply, they get a doc built for them</h3>
+    <p>The email offers notes. If they say yes, this is what arrives, personalised to their organisation and written to earn a 30-minute call, nothing more. It pays the email off, shows the shape of what {{ORG}} did, and reserves the rest for a conversation.</p>
+    <div class="artifact">
+      <div class="artifact-tag">Delivered on reply, sends as-is</div>
+      <div class="artifact-body docbody">
+        <p class="doctitle">Where Wind's next unrestricted dollar comes from</p>
+        <p>Miren,</p>
+        <p>Here are the notes I mentioned.</p>
+        <p>Around 9 in 10 dollars Wind runs on is government money, and the programs behind it are unstable. The federal Street Outreach round skipped a year, HUD pulled its youth-homelessness funding notice in December, and a partial fix only landed in February. It's the weather every youth-homelessness org is standing in right now.</p>
+        <p>In the last year on file, everything Wind raised outside government (foundations, companies and individuals combined) came to about $280,000. The channel that produces unrestricted, multi-year money (individual donors) is still almost entirely open to Wind.</p>
+        <p>What makes me confident about Wind is that you run the only shelter in the region dedicated to runaway homeless youth aged 12 to 17. A donor can see exactly what their money keeps open. I've sat with a lot of CEOs whose work takes three slides to explain. Yours takes one sentence.</p>
+        <p>We've done this with a lot of nonprofits. The closest to Wind's position was <mark class="mf">{{ORG}}</mark>, a <mark class="mf">{{org type}}</mark> from <mark class="mf">{{area}}</mark>. <mark class="mf">{{Two years ago}}</mark> they were <mark class="mf">{{~85%}}</mark> government-funded, strong program, barely any individual giving. They didn't hire a fundraiser and they didn't run a campaign. <mark class="mf">{{The CEO}}</mark> got the pitch right and, with our help, started conversations with the right people. <mark class="mf">{{Their first six-figure gift landed inside a year. Individual donors are now their largest source of unrestricted funding.}}</mark></p>
+        <p>If it's useful, I'll walk you through what we did for <mark class="mf">{{ORG}}</mark> and how you can start the same shift before Q4, on a 30-minute call.</p>
+        <p class="sig">Onwards,<br>Darren</p>
+        <p class="fresh">Current as of July 2026.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">4.</span>That books the call</h3>
+    <p>The doc's only job is the call. From there it's your process. Everything above just fills your calendar with nonprofit CEOs who raised their own hand.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">The engine, and you barely touch it</p>
+  <h2>What we run for you</h2>
+  <div class="runcard">
+    <h3>Sending infrastructure</h3>
+    <p>Emails send from separate alias domains that redirect to onwards.org, so your real domain is never exposed and can't be affected. Each inbox sends only a handful of emails a day, warmed up for weeks beforehand, which is what holds deliverability at full strength across thousands of sends.</p>
+  </div>
+  <div class="runcard">
+    <h3>Replies and booking</h3>
+    <p>Once the emails go out, we handle everything that comes back. Questions get answered, interested CEOs get their notes, and calls get booked straight onto your calendar. Nothing sits in an inbox waiting on you. You don't touch a message, you just show up to booked calls.</p>
+  </div>
+  <p class="note">Also handled: the targeting (public IRS and federal award data), lead verification, the writing, and the personalised docs.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Accuracy first</p>
+  <h2>Every word is checked, and it's yours to approve</h2>
+  <p>Accuracy is the whole game in a sector like this, so it is built into the process from the start, not bolted on.</p>
+  <p>Every email and every doc is checked by an independent adversarial pass before anything sends, a fresh reviewer briefed to kill it, not approve it. Nothing goes out that isn't traceable to a public filing, and the bar each doc clears is deliberately high: it has to read cleanly even if the CEO forwards it straight to her board's attorney. If a claim can't be sourced, it doesn't ship.</p>
+  <p>And everything runs against an Onwards knowledge doc you sign off before launch: the hard rules on what can never be said, plus your tone, message and voice. Nothing sends that doesn't sound like you.</p>
+</section>
+
+<section>
+  <div class="ask">
+    <p class="eyebrow">The one input that decides how well this converts</p>
+    <h2>Your client results</h2>
+    <p>Two of the highest-converting lines in the whole system rest on real proof from your clients: the proof line in the email, and the case-study paragraph in the doc (both above). Right now they're the highlighted placeholders.</p>
+    <p>Most of the work of filling them is ours, not yours. Charity filings are public in the US, UK and Ireland, so from a simple list of your past clients we can cross-reference the records, find the ones whose donation income visibly climbed after working with you, and bring you a shortlist to confirm. Anything else, testimonials, messages, wins you've already saved, we can gather ourselves once we're working together. Nothing to package now.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What you provide</h2>
+  <ul class="provide">
+    <li>Whatever client results you can point us at.</li>
+    <li>Sign-off on the templates, the knowledge doc and the messaging rules before anything sends.</li>
+    <li><b>On cost:</b> a flat build fee plus performance. We'll put exact numbers in a short scoped proposal once we agree the shape, no surprises.</li>
+  </ul>
+</section>
+
+<section class="close">
+  <p>If this looks right, the only next step is a quick list of your past clients so we can start pulling the proof together. We'll scope the rest properly from there. No rush, and I'm happy to walk through any of it live.</p>
+</section>
+
+<footer>
+  Built on Wind Youth Services (EIN 23-7348227), public IRS and federal award data. Two more worked examples to follow.
+</footer>
+
+</div>
+</body>
+</html>
